@@ -32594,3 +32594,99 @@ img {
     flex: 1 1 100% !important;
   }
 }
+
+/* Stats Grid Single Row */
+.stats-grid-single-row {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch !important;
+  gap: 14px !important;
+  max-width: 1240px;
+  margin: 36px auto 0 !important;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding: 6px 2px 14px;
+}
+
+.stats-grid-single-row::-webkit-scrollbar {
+  display: none;
+}
+
+.stat-card-mini {
+  flex: 1 1 0 !important;
+  min-width: 155px;
+  background: linear-gradient(180deg, #161616, #0e0e0e);
+  border: 1px solid rgba(255, 165, 0, 0.20);
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+  box-sizing: border-box;
+}
+
+.stat-card-mini:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 165, 0, 0.45);
+  box-shadow: 0 14px 30px rgba(255, 165, 0, 0.15);
+}
+
+.stat-card-mini .icon-circle {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  border-radius: 50%;
+  background: rgba(255, 165, 0, 0.10);
+  border: 1px solid rgba(255, 165, 0, 0.25);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.stat-card-mini .icon-circle svg {
+  width: 18px !important;
+  height: 18px !important;
+  fill: #FFA500 !important;
+  display: block;
+}
+
+.stat-card-mini .stat-content {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  gap: 2px;
+  min-width: 0;
+}
+
+.stat-card-mini .stat-content h3 {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+  margin: 0 !important;
+  line-height: 1.25 !important;
+  white-space: normal;
+  font-family: inherit;
+}
+
+.stat-card-mini .stat-content .stat-number {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  background: linear-gradient(135deg, #FFA500, #ff6a00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  line-height: 1.15 !important;
+  white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+  .stat-card-mini {
+    min-width: 170px;
+    flex: 0 0 auto !important;
+  }
+}
