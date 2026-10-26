@@ -99,42 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4. Horizontal Sliders Helper (Success stories, Guest mentors, Student life)
-  function setupHorizontalSlider(containerSelector, prevBtnSelector, nextBtnSelector, step = 380) {
-    const container = document.querySelector(containerSelector);
-    const prevBtn = document.querySelector(prevBtnSelector);
-    const nextBtn = document.querySelector(nextBtnSelector);
 
-    if (!container) return;
-
-    // Enable smooth horizontal scrolling
-    container.style.overflowX = 'auto';
-    container.style.scrollBehavior = 'smooth';
-    container.style.scrollbarWidth = 'none'; // Firefox
-    container.style.msOverflowStyle = 'none'; // IE/Edge
-
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        container.scrollBy({ left: -step, behavior: 'smooth' });
-      });
-    }
-
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        container.scrollBy({ left: step, behavior: 'smooth' });
-      });
-    }
-  }
-
-
-
-  // Guest faculty / mentors slider
-  setupHorizontalSlider(
-    '.styles_guestFaculty__26Ewq .swiper-wrapper',
-    '.styles_guestFaculty__26Ewq .prevBtn',
-    '.styles_guestFaculty__26Ewq .nextBtn',
-    320
-  );
 
 
 
