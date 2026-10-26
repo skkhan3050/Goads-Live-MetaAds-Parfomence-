@@ -126,13 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Alumni achievements slider
-  setupHorizontalSlider(
-    '.style_sliderWrapper__lufFM .swiper-wrapper',
-    '.style_sliderWrapper__lufFM .prevBtn',
-    '.style_sliderWrapper__lufFM .nextBtn',
-    390
-  );
+
 
   // Guest faculty / mentors slider
   setupHorizontalSlider(
