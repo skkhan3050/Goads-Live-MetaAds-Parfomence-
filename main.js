@@ -200,20 +200,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Parallax Student Pins in Hero Banner
+  // 7. Parallax Student Pins in Hero Banner (if present)
   const cards = document.querySelectorAll('[data-parallax-strength]');
-  window.addEventListener('mousemove', (e) => {
-    const { clientX, clientY } = e;
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2;
-    const deltaX = (clientX - centerX) / centerX;
-    const deltaY = (clientY - centerY) / centerY;
+  if (cards.length > 0) {
+    window.addEventListener('mousemove', (e) => {
+      const { clientX, clientY } = e;
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      const deltaX = (clientX - centerX) / centerX;
+      const deltaY = (clientY - centerY) / centerY;
 
-    cards.forEach(card => {
-      const strength = parseFloat(card.getAttribute('data-parallax-strength') || 0.1);
-      const moveX = deltaX * strength * 25;
-      const moveY = deltaY * strength * 25;
-      card.style.transform = 'translate(' + moveX + 'px, ' + moveY + 'px)';
+      cards.forEach(card => {
+        const strength = parseFloat(card.getAttribute('data-parallax-strength') || 0.1);
+        const moveX = deltaX * strength * 25;
+        const moveY = deltaY * strength * 25;
+        card.style.transform = 'translate(' + moveX + 'px, ' + moveY + 'px)';
+      });
     });
-  });
+  }
 });
