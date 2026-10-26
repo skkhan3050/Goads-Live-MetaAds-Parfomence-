@@ -142,14 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
     320
   );
 
-  // Life @ DA360 video slider
-  setupHorizontalSlider(
-    '.style_lifeAtDA360Section__Gl_7N .swiper-wrapper',
-    '.style_lifeAtDA360Section__Gl_7N .prevBtn',
-    '.style_lifeAtDA360Section__Gl_7N .nextBtn',
-    340
-  );
-
   // Inside DA360 meetup cards slider
   setupHorizontalSlider(
     '.style_communityMeetupSection__IHxYT .swiper-wrapper',
@@ -157,36 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
     '.style_communityMeetupSection__IHxYT .nextBtn',
     360
   );
-
-  // 5. Video Play Modal
-  const videoModal = document.getElementById('videoModal');
-  const videoIframe = document.getElementById('videoIframe');
-  const closeVideoModal = document.getElementById('closeVideoModal');
-  const playBtns = document.querySelectorAll('.style_plaYbtn__Qq1Jo, .style_videoImgBox__ZIabe');
-
-  if (videoModal && videoIframe && closeVideoModal) {
-    const sampleVideoUrl = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1';
-
-    playBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        videoIframe.src = sampleVideoUrl;
-        videoModal.classList.add('open');
-      });
-    });
-
-    closeVideoModal.addEventListener('click', () => {
-      videoModal.classList.remove('open');
-      videoIframe.src = '';
-    });
-
-    videoModal.addEventListener('click', (e) => {
-      if (e.target === videoModal) {
-        videoModal.classList.remove('open');
-        videoIframe.src = '';
-      }
-    });
-  }
 
   // 6. Brand Logos Auto-Marquee
   const brandTrack = document.querySelector('.style_brandRow__m0R_Q');
