@@ -142,13 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
     320
   );
 
-  // Inside DA360 meetup cards slider
-  setupHorizontalSlider(
-    '.style_communityMeetupSection__IHxYT .swiper-wrapper',
-    '.style_communityMeetupSection__IHxYT .prevBtn',
-    '.style_communityMeetupSection__IHxYT .nextBtn',
-    360
-  );
+
 
   // 6. Brand Logos Auto-Marquee
   const brandTrack = document.querySelector('.style_brandRow__m0R_Q');
